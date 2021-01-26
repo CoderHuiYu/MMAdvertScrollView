@@ -73,5 +73,5 @@ extension CustomerView2: MMAdvertScrollViewDelegate {
 * ARC
 * iOS>=10.0
 
-## 如果有任何问题 ( 如果有任何问题)
+## If you have any questions ( 如果有任何问题)
 #### If you have any questions, you can email to me:171364980@qq.com (如果有任何问题，可以发邮件给我:171364980@qq.com)
