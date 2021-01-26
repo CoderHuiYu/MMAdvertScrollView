@@ -1,6 +1,6 @@
 # MMAdvertScrollView
 ##### 一个轻量级、简单易用的公告轮播组件【swift】
-##GIf：
+## GIf：
 ## 1.How to use MMAdvertScrollView
 * Installation with CocoaPods：`pod 'MMAdvertScrollView'`
 
@@ -67,7 +67,7 @@ extension CustomerView2: MMAdvertScrollViewDelegate {
         customeCell.backgroundColor = .yellow
     }
 ```
-#### You can assign and modify cells in this proxy method(你可以在这个代理方法里面进行cell的赋值和修改)
+#### You can assign and modify cells in this protocol method(你可以在这个代理方法里面进行cell的赋值和修改)
 
 ## Remind
 * ARC
