@@ -57,6 +57,18 @@ extension CustomerView2: MMAdvertScrollViewDelegate {
     }
 }
 ```
+### ！Warning：如果自定义Cell，必须实现 `customCycleScrollViewSet`
+
+####example:
+```
+ func customCycleScrollViewSet(_ collectionViewCell: UICollectionViewCell, numberOfItems item: Int, cycleView view: MMAdvertScrollView) {
+        let customeCell = collectionViewCell as! CustomerXIBCell
+        customeCell.titles = ["恭喜xx，完成了数据管理能力测评。", "我是自定义view，而且cell是用xib" ,"恭喜xxxxxxxxxxxxxx，完成实名认证。"]
+        customeCell.backgroundColor = .yellow
+    }
+```
+你可以在这个代理方法里面进行cell的赋值和修改
+
 ##Remind
 * ARC
 * iOS>=13.0
