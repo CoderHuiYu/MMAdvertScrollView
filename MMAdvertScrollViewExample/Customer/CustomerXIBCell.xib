@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomerXIBCelll"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CustomerXIBCell" customModule="MMAdvertScrollView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="105"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="105"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFw-X4-70R">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="105"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="IXG-Mr-SKl">
+                                <rect key="frame" x="15" y="10" width="415" height="85"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9SO-WE-3ea">
+                                        <rect key="frame" x="0.0" y="0.0" width="329" height="21"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advert" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-PL-TGz">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="GfO-64-CjF"/>
+                                                    <constraint firstAttribute="width" constant="15" id="z5e-wW-j3r"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="恭喜xxxxxxxxxxxxx，完成了数据管理能力测评。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiB-zA-Kcf">
+                                                <rect key="frame" x="21" y="0.0" width="308" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.2000022233" green="0.19999703760000001" blue="0.1999980509" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="e0U-e3-ewy">
+                                        <rect key="frame" x="0.0" y="32" width="264.5" height="21"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advert" translatesAutoresizingMaskIntoConstraints="NO" id="Ao0-9f-sL4">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="hSg-nY-uRu"/>
+                                                    <constraint firstAttribute="width" constant="15" id="mmu-qX-A6R"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="恭喜xxxxxxxxxxxxxx，完成实名认证。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5W-C6-Ij4">
+                                                <rect key="frame" x="21" y="0.0" width="243.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.2000022233" green="0.19999703760000001" blue="0.1999980509" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="rwC-Na-LFm">
+                                        <rect key="frame" x="0.0" y="64" width="250.5" height="21"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advert" translatesAutoresizingMaskIntoConstraints="NO" id="4L2-ED-fRM">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="IHa-En-Tqe"/>
+                                                    <constraint firstAttribute="height" constant="15" id="pPz-dT-yy7"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜xxxxxxxxxxxxxx，成为供应商。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQa-Em-T1e">
+                                                <rect key="frame" x="21" y="0.0" width="229.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.2000022233" green="0.19999703760000001" blue="0.1999980509" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IXG-Mr-SKl" firstAttribute="leading" secondItem="gFw-X4-70R" secondAttribute="leading" constant="15" id="3eL-22-lyX"/>
+                            <constraint firstAttribute="trailing" secondItem="IXG-Mr-SKl" secondAttribute="trailing" id="HI3-W3-whc"/>
+                            <constraint firstItem="IXG-Mr-SKl" firstAttribute="top" secondItem="gFw-X4-70R" secondAttribute="top" constant="10" id="bZN-Q3-Wxq"/>
+                            <constraint firstAttribute="bottom" secondItem="IXG-Mr-SKl" secondAttribute="bottom" constant="10" id="yml-tV-FDp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gFw-X4-70R" secondAttribute="bottom" id="Aet-Um-ied"/>
+                <constraint firstItem="gFw-X4-70R" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dfg-WR-fKa"/>
+                <constraint firstItem="gFw-X4-70R" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UvY-tr-5vV"/>
+                <constraint firstAttribute="trailing" secondItem="gFw-X4-70R" secondAttribute="trailing" id="nU5-c5-XL2"/>
+            </constraints>
+            <size key="customSize" width="430" height="105"/>
+            <connections>
+                <outlet property="titleLabel1" destination="MiB-zA-Kcf" id="wLH-DW-5Ay"/>
+                <outlet property="titleLabel2" destination="g5W-C6-Ij4" id="W2f-oq-EsU"/>
+                <outlet property="titleLabel3" destination="cQa-Em-T1e" id="rwO-Zp-ZQ4"/>
+            </connections>
+            <point key="canvasLocation" x="86.956521739130437" y="39.84375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="advert" width="15" height="15"/>
+    </resources>
+</document>
