@@ -125,7 +125,6 @@ extension MMAdvertScrollView : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("didSelectItemAt --- indexPath\(indexPath.item)")
         delegate?.collectionView?(self, didSelectItemAt: indexPath.item)
-        selectItemClosure?(indexPath.item)
     }
     
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E0C7AA9725BFC12600156BDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AA9625BFC12600156BDE /* AppDelegate.swift */; };
-		E0C7AA9925BFC12600156BDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AA9825BFC12600156BDE /* SceneDelegate.swift */; };
 		E0C7AA9B25BFC12600156BDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AA9A25BFC12600156BDE /* ViewController.swift */; };
 		E0C7AA9E25BFC12600156BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C7AA9C25BFC12600156BDE /* Main.storyboard */; };
 		E0C7AAA025BFC12700156BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C7AA9F25BFC12700156BDE /* Assets.xcassets */; };
@@ -44,7 +43,6 @@
 /* Begin PBXFileReference section */
 		E0C7AA9325BFC12600156BDE /* MMAdvertScrollViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMAdvertScrollViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C7AA9625BFC12600156BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0C7AA9825BFC12600156BDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E0C7AA9A25BFC12600156BDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0C7AA9D25BFC12600156BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0C7AA9F25BFC12700156BDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			children = (
 				E0EA180425C0106700395275 /* MMAdvertScrollView */,
 				E0C7AA9625BFC12600156BDE /* AppDelegate.swift */,
-				E0C7AA9825BFC12600156BDE /* SceneDelegate.swift */,
 				E0C7AA9A25BFC12600156BDE /* ViewController.swift */,
 				E0C7AA9C25BFC12600156BDE /* Main.storyboard */,
 				E0C7AA9F25BFC12700156BDE /* Assets.xcassets */,
@@ -301,7 +298,6 @@
 				E0C7AA9725BFC12600156BDE /* AppDelegate.swift in Sources */,
 				E0C7AADB25BFC1D300156BDE /* CustomerView.swift in Sources */,
 				E0C7AADA25BFC1D300156BDE /* CustomerXIBCell.swift in Sources */,
-				E0C7AA9925BFC12600156BDE /* SceneDelegate.swift in Sources */,
 				E0C7AAD725BFC1D300156BDE /* CustomerView2.swift in Sources */,
 				E0EA180725C0106700395275 /* MMAdvertCell.swift in Sources */,
 				E0EA180825C0106700395275 /* MMAdvertScrollView.swift in Sources */,
@@ -410,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -465,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -483,6 +479,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65RJEBH987;
 				INFOPLIST_FILE = MMAdvertScrollViewExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,6 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65RJEBH987;
 				INFOPLIST_FILE = MMAdvertScrollViewExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  MMAdvertScrollViewExample
+//  example
 //
 //  Created by yuhui on 2021/1/26.
 //
