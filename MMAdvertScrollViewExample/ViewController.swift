@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.addSubview(createLabel(title: "竖向滚动", frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: 30)))
         let m1 = MMAdvertScrollView(frame: CGRect(x: 0, y: 135, width: UIScreen.main.bounds.width, height: 40))
+        m1.timeInterval = 3
+        m1.scrollDirection = .vertical 
         m1.dataArray = ["恭喜xx，完成了数据管理能力测评。" ,"恭喜xxxxxxxxxxxxxx，完成实名认证。"]
         view.addSubview(m1)
 

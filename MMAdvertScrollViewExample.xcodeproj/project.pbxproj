@@ -15,13 +15,13 @@
 		E0C7AAA325BFC12700156BDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C7AAA125BFC12700156BDE /* LaunchScreen.storyboard */; };
 		E0C7AAAE25BFC12800156BDE /* MMAdvertScrollViewExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAAD25BFC12800156BDE /* MMAdvertScrollViewExampleTests.swift */; };
 		E0C7AAB925BFC12800156BDE /* MMAdvertScrollViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAB825BFC12800156BDE /* MMAdvertScrollViewExampleUITests.swift */; };
-		E0C7AACC25BFC1BC00156BDE /* MMAdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AACA25BFC1BC00156BDE /* MMAdvertCell.swift */; };
-		E0C7AACD25BFC1BC00156BDE /* MMAdvertScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AACB25BFC1BC00156BDE /* MMAdvertScrollView.swift */; };
 		E0C7AAD725BFC1D300156BDE /* CustomerView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAD225BFC1D300156BDE /* CustomerView2.swift */; };
 		E0C7AAD825BFC1D300156BDE /* CustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAD325BFC1D300156BDE /* CustomerCollectionViewCell.swift */; };
 		E0C7AAD925BFC1D300156BDE /* CustomerXIBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C7AAD425BFC1D300156BDE /* CustomerXIBCell.xib */; };
 		E0C7AADA25BFC1D300156BDE /* CustomerXIBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAD525BFC1D300156BDE /* CustomerXIBCell.swift */; };
 		E0C7AADB25BFC1D300156BDE /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAD625BFC1D300156BDE /* CustomerView.swift */; };
+		E0EA180725C0106700395275 /* MMAdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA180525C0106700395275 /* MMAdvertCell.swift */; };
+		E0EA180825C0106700395275 /* MMAdvertScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA180625C0106700395275 /* MMAdvertScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +56,13 @@
 		E0C7AAB425BFC12800156BDE /* MMAdvertScrollViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMAdvertScrollViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C7AAB825BFC12800156BDE /* MMAdvertScrollViewExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMAdvertScrollViewExampleUITests.swift; sourceTree = "<group>"; };
 		E0C7AABA25BFC12800156BDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0C7AACA25BFC1BC00156BDE /* MMAdvertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAdvertCell.swift; sourceTree = "<group>"; };
-		E0C7AACB25BFC1BC00156BDE /* MMAdvertScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAdvertScrollView.swift; sourceTree = "<group>"; };
 		E0C7AAD225BFC1D300156BDE /* CustomerView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerView2.swift; sourceTree = "<group>"; };
 		E0C7AAD325BFC1D300156BDE /* CustomerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0C7AAD425BFC1D300156BDE /* CustomerXIBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerXIBCell.xib; sourceTree = "<group>"; };
 		E0C7AAD525BFC1D300156BDE /* CustomerXIBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerXIBCell.swift; sourceTree = "<group>"; };
 		E0C7AAD625BFC1D300156BDE /* CustomerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerView.swift; sourceTree = "<group>"; };
+		E0EA180525C0106700395275 /* MMAdvertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAdvertCell.swift; sourceTree = "<group>"; };
+		E0EA180625C0106700395275 /* MMAdvertScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAdvertScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 		E0C7AA9525BFC12600156BDE /* MMAdvertScrollViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				E0C7AAC925BFC1BC00156BDE /* MMAdvertScrollView */,
+				E0EA180425C0106700395275 /* MMAdvertScrollView */,
 				E0C7AA9625BFC12600156BDE /* AppDelegate.swift */,
 				E0C7AA9825BFC12600156BDE /* SceneDelegate.swift */,
 				E0C7AA9A25BFC12600156BDE /* ViewController.swift */,
@@ -144,16 +144,6 @@
 			path = MMAdvertScrollViewExampleUITests;
 			sourceTree = "<group>";
 		};
-		E0C7AAC925BFC1BC00156BDE /* MMAdvertScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				E0C7AACA25BFC1BC00156BDE /* MMAdvertCell.swift */,
-				E0C7AACB25BFC1BC00156BDE /* MMAdvertScrollView.swift */,
-			);
-			name = MMAdvertScrollView;
-			path = ../../MMAdvertScrollView;
-			sourceTree = "<group>";
-		};
 		E0C7AAD125BFC1D300156BDE /* Customer */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +154,15 @@
 				E0C7AAD625BFC1D300156BDE /* CustomerView.swift */,
 			);
 			path = Customer;
+			sourceTree = SOURCE_ROOT;
+		};
+		E0EA180425C0106700395275 /* MMAdvertScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E0EA180525C0106700395275 /* MMAdvertCell.swift */,
+				E0EA180625C0106700395275 /* MMAdvertScrollView.swift */,
+			);
+			path = MMAdvertScrollView;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -298,14 +297,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0C7AAD825BFC1D300156BDE /* CustomerCollectionViewCell.swift in Sources */,
-				E0C7AACD25BFC1BC00156BDE /* MMAdvertScrollView.swift in Sources */,
 				E0C7AA9B25BFC12600156BDE /* ViewController.swift in Sources */,
-				E0C7AACC25BFC1BC00156BDE /* MMAdvertCell.swift in Sources */,
 				E0C7AA9725BFC12600156BDE /* AppDelegate.swift in Sources */,
 				E0C7AADB25BFC1D300156BDE /* CustomerView.swift in Sources */,
 				E0C7AADA25BFC1D300156BDE /* CustomerXIBCell.swift in Sources */,
 				E0C7AA9925BFC12600156BDE /* SceneDelegate.swift in Sources */,
 				E0C7AAD725BFC1D300156BDE /* CustomerView2.swift in Sources */,
+				E0EA180725C0106700395275 /* MMAdvertCell.swift in Sources */,
+				E0EA180825C0106700395275 /* MMAdvertScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

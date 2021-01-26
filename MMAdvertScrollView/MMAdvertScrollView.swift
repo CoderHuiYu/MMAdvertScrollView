@@ -16,7 +16,6 @@ protocol MMAdvertScrollViewValueDelegate {
 
 class MMAdvertScrollView: UIView {
 
-    var selectItemClosure: ((_ item: Int) -> Void)?
     var timeInterval: TimeInterval = 3.0
     var scrollDirection: UICollectionView.ScrollDirection = .vertical { didSet { layout.scrollDirection = scrollDirection } }
     var dataArray: [String]? { didSet { collectionView?.reloadData() } }
