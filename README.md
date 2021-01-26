@@ -1,6 +1,6 @@
 # MMAdvertScrollView
-#####一个轻量级、简单易用的公告轮播组件【swift】
-##GIf：
+#### 一个轻量级、简单易用的公告轮播组件【swift】
+## GIf：
 ## 1.How to use MMAdvertScrollView
 * Installation with CocoaPods：`pod 'MMAdvertScrollView'`
 
