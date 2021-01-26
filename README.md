@@ -1,8 +1,8 @@
 # MMAdvertScrollView
 ##### 一个轻量级、简单易用的公告轮播组件【swift】
-## video：
+## image：
 
-<iframe height=300 width=200 src="https://github.com/CoderHuiYu/MMAdvertScrollView/blob/main/example.MP4">
+<img src="https://github.com/CoderHuiYu/MMAdvertScrollView/blob/main/example.jpg" width = "200" height = "300" alt="example" align=center />
 
 ## 1.How to use MMAdvertScrollView
 * Installation with CocoaPods：`pod 'MMAdvertScrollView'`
