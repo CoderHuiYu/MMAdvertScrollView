@@ -1,6 +1,6 @@
 # MMAdvertScrollView
-#### 一个轻量级、简单易用的公告轮播组件【swift】
-## GIf：
+#####一个轻量级、简单易用的公告轮播组件【swift】
+##GIf：
 ## 1.How to use MMAdvertScrollView
 * Installation with CocoaPods：`pod 'MMAdvertScrollView'`
 
@@ -24,9 +24,9 @@
     @objc optional  func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int)
 }
 ```
-#### 我们支持xib和纯代码两种方式自定义的view
+#### We support both XIB and pure code custom views（我们支持xib和纯代码两种方式自定义的view）
 ###2.1. XIB
-#### 可以参考CustomerView
+#### you can refer to CustomerView (可以参考CustomerView)
 ```
 extension CustomerView: MMAdvertScrollViewDelegate {
     // 注册 xib cell
@@ -41,8 +41,8 @@ extension CustomerView: MMAdvertScrollViewDelegate {
     }
 }
 ```
-###2.2 纯代码
-####可以参考CustomerView2
+### 2.2 pure code (纯代码)
+#### you can refer to Customer2 (可以参考CustomerView2)
 ```
 extension CustomerView2: MMAdvertScrollViewDelegate {
     // 注册纯代码cell
@@ -57,9 +57,9 @@ extension CustomerView2: MMAdvertScrollViewDelegate {
     }
 }
 ```
-### ！Warning：如果自定义Cell，必须实现 `customCycleScrollViewSet`
+### ！Warning：If you customize the Cell, you must implement it`customCycleScrollViewSet`(如果自定义Cell，必须实现 `customCycleScrollViewSet`)
 
-####example:
+#### example:
 ```
  func customCycleScrollViewSet(_ collectionViewCell: UICollectionViewCell, numberOfItems item: Int, cycleView view: MMAdvertScrollView) {
         let customeCell = collectionViewCell as! CustomerXIBCell
@@ -67,11 +67,11 @@ extension CustomerView2: MMAdvertScrollViewDelegate {
         customeCell.backgroundColor = .yellow
     }
 ```
-你可以在这个代理方法里面进行cell的赋值和修改
+#### You can assign and modify cells in this proxy method(你可以在这个代理方法里面进行cell的赋值和修改)
 
 ##Remind
 * ARC
 * iOS>=13.0
 
-## 如果有任何问题
-#### 如果有任何问题，可以发邮件给我:171364980@qq.com
+## 如果有任何问题 ( 如果有任何问题)
+#### If you have any questions, you can email to me:171364980@qq.com (如果有任何问题，可以发邮件给我:171364980@qq.com)
