@@ -1,5 +1,5 @@
 # MMAdvertScrollView
-#####一个轻量级、简单易用的公告轮播组件【swift】
+##### 一个轻量级、简单易用的公告轮播组件【swift】
 ##GIf：
 ## 1.How to use MMAdvertScrollView
 * Installation with CocoaPods：`pod 'MMAdvertScrollView'`
@@ -25,7 +25,7 @@
 }
 ```
 #### We support both XIB and pure code custom views（我们支持xib和纯代码两种方式自定义的view）
-###2.1. XIB
+### 2.1. XIB
 #### you can refer to CustomerView (可以参考CustomerView)
 ```
 extension CustomerView: MMAdvertScrollViewDelegate {
@@ -69,7 +69,7 @@ extension CustomerView2: MMAdvertScrollViewDelegate {
 ```
 #### You can assign and modify cells in this proxy method(你可以在这个代理方法里面进行cell的赋值和修改)
 
-##Remind
+## Remind
 * ARC
 * iOS>=13.0
 
