@@ -18,7 +18,7 @@ class MMAdvertScrollView: UIView {
 
     var timeInterval: TimeInterval = 3.0
     var scrollDirection: UICollectionView.ScrollDirection = .vertical { didSet { layout.scrollDirection = scrollDirection } }
-    var dataArray: [String]? { didSet { collectionView?.reloadData() } }
+    var dataArray: [String]? { didSet { collectionView?.reloadData(); reload = true } }
     var isOnlyShowTitle: Bool = false
     weak open var delegate: MMAdvertScrollViewDelegate? {
         didSet {
@@ -31,6 +31,7 @@ class MMAdvertScrollView: UIView {
             }
         }
     }
+    private var reload = false
     private var collectionView: UICollectionView?
     private var timer: Timer?
     private var layout = UICollectionViewFlowLayout()
@@ -87,7 +88,13 @@ class MMAdvertScrollView: UIView {
     private func updateUI() {
         guard let datas = dataArray else { return }
         if datas.count <= 1 { return }
-        let currentIndexPath = collectionView?.indexPathsForVisibleItems.last
+        var currentIndexPath = collectionView?.indexPathsForVisibleItems.last
+        if reload {
+            if currentIndexPath?.item != 0 {
+                currentIndexPath = IndexPath(row: dataArray!.count - 1, section: 0);
+            }
+            reload = false
+        }
         let resetCurrentIndexPath = IndexPath(row: currentIndexPath?.item ?? 0, section: maxSectionCount >> 2)
         collectionView!.scrollToItem(at: resetCurrentIndexPath, at: (scrollDirection == .vertical ? .bottom : .right), animated: false)
         var nextItem = resetCurrentIndexPath.item + 1
