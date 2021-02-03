@@ -5,7 +5,7 @@
 <img src="https://github.com/CoderHuiYu/MMAdvertScrollView/blob/main/example.jpg" width = "200" height = "300" alt="example" align=center />
 
 ## 1.How to use MMAdvertScrollView
-* Installation with CocoaPods：`pod 'MMAdvertScrollView'`
+* Installation with CocoaPods：`pod 'MMAdvertScrollView', '~> 1.0.1'`
 
 ```
  var timeInterval: TimeInterval = 3.0 // 滚动间隔默认为3秒
