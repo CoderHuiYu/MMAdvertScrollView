@@ -51,9 +51,7 @@ public class MMAdvertScrollView: UIView {
         layout.itemSize = CGSize(width: frame.size.width, height: frame.size.height)
         if dataArray?.count ?? 0 > 1 { collectionView?.scrollToItem(at: IndexPath(item: 0, section: maxSectionCount >> 2), at: (scrollDirection == .vertical ? .bottom : .right), animated: false) }
     }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     /// Componets
     private func initialization() {

@@ -21,6 +21,7 @@ class MMAdvertCell: UICollectionViewCell {
     }
 
     override func layoutSubviews() {
+        // need to use autolayout 
         stackView.frame = CGRect(x: 10, y: 0, width: frame.width - 20, height: frame.height)
     }
 
