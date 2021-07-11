@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C34EADE269ADE9800B91D30 /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C34EADD269ADE9800B91D30 /* UIView+Utilities.swift */; };
 		E0C7AA9725BFC12600156BDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AA9625BFC12600156BDE /* AppDelegate.swift */; };
 		E0C7AA9B25BFC12600156BDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AA9A25BFC12600156BDE /* ViewController.swift */; };
 		E0C7AA9E25BFC12600156BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C7AA9C25BFC12600156BDE /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C34EADD269ADE9800B91D30 /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
 		E0C7AA9325BFC12600156BDE /* MMAdvertScrollViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMAdvertScrollViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C7AA9625BFC12600156BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C7AA9A25BFC12600156BDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				E0EA180525C0106700395275 /* MMAdvertCell.swift */,
 				E0EA180625C0106700395275 /* MMAdvertScrollView.swift */,
+				0C34EADD269ADE9800B91D30 /* UIView+Utilities.swift */,
 			);
 			path = MMAdvertScrollView;
 			sourceTree = SOURCE_ROOT;
@@ -295,6 +298,7 @@
 			files = (
 				E0C7AAD825BFC1D300156BDE /* CustomerCollectionViewCell.swift in Sources */,
 				E0C7AA9B25BFC12600156BDE /* ViewController.swift in Sources */,
+				0C34EADE269ADE9800B91D30 /* UIView+Utilities.swift in Sources */,
 				E0C7AA9725BFC12600156BDE /* AppDelegate.swift in Sources */,
 				E0C7AADB25BFC1D300156BDE /* CustomerView.swift in Sources */,
 				E0C7AADA25BFC1D300156BDE /* CustomerXIBCell.swift in Sources */,
@@ -479,7 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65RJEBH987;
 				INFOPLIST_FILE = MMAdvertScrollViewExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,7 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65RJEBH987;
 				INFOPLIST_FILE = MMAdvertScrollViewExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

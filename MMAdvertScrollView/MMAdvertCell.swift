@@ -2,7 +2,7 @@
 //  MMAdvertCell.swift
 //  MMAdvertScrollView
 //
-//  Created by 余辉 on 2021/1/23.
+//  Created by jefferyYu on 2021/4/26.
 //
 
 import UIKit
@@ -17,12 +17,14 @@ class MMAdvertCell: UICollectionViewCell {
         backgroundColor = .purple
         translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(stackView)
-    }
-
-    override func layoutSubviews() {
-        // need to use autolayout 
-        stackView.frame = CGRect(x: 10, y: 0, width: frame.width - 20, height: frame.height)
+        NSLayoutConstraint.activate([
+            contentView.leftAnchor.constraint(equalTo: leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: rightAnchor),
+            contentView.topAnchor.constraint(equalTo: topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor).with(priority: .pseudoRequired),
+            contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
+        ])
+        contentView.addSubview(stackView, pinningEdges: .all, withInsets: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
     }
 
     private lazy var stackView: UIStackView = {

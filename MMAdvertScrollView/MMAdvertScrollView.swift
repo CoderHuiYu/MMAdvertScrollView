@@ -1,4 +1,10 @@
-// Copyright © 2021 Peogoo. All rights reserved.
+//
+//  MMAdvertScrollView.swift
+//  MMAdvertScrollView
+//
+//  Created by JefferyYu on 2021/4/26.
+//
+
 
 import UIKit
 
@@ -37,7 +43,7 @@ public class MMAdvertScrollView: UIView {
     private var layout = UICollectionViewFlowLayout()
     private let ID = "ETCycleCollectionViewCellidentifier"
     private let maxSectionCount = 100
-    
+
     convenience init() {
         self.init(frame: CGRect())
     }
@@ -48,10 +54,11 @@ public class MMAdvertScrollView: UIView {
     }
     
     public override func layoutSubviews() {
+        print(frame)
         layout.itemSize = CGSize(width: frame.size.width, height: frame.size.height)
         if dataArray?.count ?? 0 > 1 { collectionView?.scrollToItem(at: IndexPath(item: 0, section: maxSectionCount >> 2), at: (scrollDirection == .vertical ? .bottom : .right), animated: false) }
     }
-    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    required init?(coder: NSCoder) { super.init(coder: coder); initialization() }
     
     /// Componets
     private func initialization() {
@@ -71,7 +78,7 @@ public class MMAdvertScrollView: UIView {
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = scrollDirection
         layout.sectionInset = .zero
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height), collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView?.backgroundColor = backgroundColor
         collectionView?.delegate = self
         collectionView?.dataSource = self
@@ -80,7 +87,7 @@ public class MMAdvertScrollView: UIView {
         collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.showsVerticalScrollIndicator = false
         collectionView?.register(MMAdvertCell.self, forCellWithReuseIdentifier: ID)
-        addSubview(collectionView!)
+        addSubview(collectionView!, pinningEdges: .all)
     }
     
     private func updateUI() {
@@ -118,7 +125,7 @@ extension MMAdvertScrollView : UICollectionViewDelegate, UICollectionViewDataSou
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ID, for: indexPath)
-    
+
         if delegate?.customCycleScrollViewNibCellClass?(self) != nil  && delegate?.customCycleScrollViewSet(cell, numberOfItems: indexPath.item, cycleView: self) != nil { return cell }
         if delegate?.customCycleScrollViewCellClass?(self) != nil  && delegate?.customCycleScrollViewSet(cell, numberOfItems: indexPath.item, cycleView: self) != nil { return cell }
         

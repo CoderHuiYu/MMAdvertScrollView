@@ -19,10 +19,12 @@ class ViewController: UIViewController {
         m1.dataArray = ["恭喜xx，完成了数据管理能力测评。" ,"恭喜xxxxxxxxxxxxxx，完成实名认证。"]
         view.addSubview(m1)
 
-        let m2 = MMAdvertScrollView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 40))
+        let m2 = MMAdvertScrollView()
         m2.isOnlyShowTitle = true
         m2.dataArray = ["恭喜xx，完成了数据管理能力测评。" ,"恭喜xxxxxxxxxxxxxx，完成实名认证。"]
-        view.addSubview(m2)
+
+        NSLayoutConstraint.activate([  m2.heightAnchor.constraint(equalToConstant: 40) ])
+        view.addSubview(m2, pinningEdges: [ .left, .right, .top ], withInsets: UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0))
 
         view.addSubview(createLabel(title: "横向滚动", frame: CGRect(x: 0, y: 270, width: UIScreen.main.bounds.width, height: 30)))
         let m3 = MMAdvertScrollView(frame: CGRect(x: 0, y: 305, width: UIScreen.main.bounds.width, height: 40))
