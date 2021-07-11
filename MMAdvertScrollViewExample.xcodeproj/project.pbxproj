@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C34EADE269ADE9800B91D30 /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C34EADD269ADE9800B91D30 /* UIView+Utilities.swift */; };
+		0CA27C73269B1ADD008C08E7 /* MMAdvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA27C72269B1ADD008C08E7 /* MMAdvertView.swift */; };
 		E0C7AA9725BFC12600156BDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AA9625BFC12600156BDE /* AppDelegate.swift */; };
 		E0C7AA9B25BFC12600156BDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AA9A25BFC12600156BDE /* ViewController.swift */; };
 		E0C7AA9E25BFC12600156BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C7AA9C25BFC12600156BDE /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		0C34EADD269ADE9800B91D30 /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
+		0CA27C72269B1ADD008C08E7 /* MMAdvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMAdvertView.swift; sourceTree = "<group>"; };
 		E0C7AA9325BFC12600156BDE /* MMAdvertScrollViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMAdvertScrollViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C7AA9625BFC12600156BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C7AA9A25BFC12600156BDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		E0EA180425C0106700395275 /* MMAdvertScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				0CA27C72269B1ADD008C08E7 /* MMAdvertView.swift */,
 				E0EA180525C0106700395275 /* MMAdvertCell.swift */,
 				E0EA180625C0106700395275 /* MMAdvertScrollView.swift */,
 				0C34EADD269ADE9800B91D30 /* UIView+Utilities.swift */,
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA27C73269B1ADD008C08E7 /* MMAdvertView.swift in Sources */,
 				E0C7AAD825BFC1D300156BDE /* CustomerCollectionViewCell.swift in Sources */,
 				E0C7AA9B25BFC12600156BDE /* ViewController.swift in Sources */,
 				0C34EADE269ADE9800B91D30 /* UIView+Utilities.swift in Sources */,
