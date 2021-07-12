@@ -45,7 +45,6 @@ public class MMAdvertScrollView: UIView {
     }
     
     public override func layoutSubviews() {
-        print(frame)
         layout.itemSize = CGSize(width: frame.size.width, height: frame.size.height)
         if itemsCount() > 1 { collectionView?.scrollToItem(at: IndexPath(item: 0, section: maxSectionCount >> 2), at: (scrollDirection == .vertical ? .bottom : .right), animated: false) }
     }
@@ -120,7 +119,6 @@ extension MMAdvertScrollView : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("section == \(section)")
         if delegate?.customViewConfigure(numberOfItems: 0, cycleView: self) != nil && delegate?.customerViewDataArrayCount() != nil {
             return delegate?.customerViewDataArrayCount() ?? 0
         }
@@ -140,7 +138,6 @@ extension MMAdvertScrollView : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("didSelectItemAt --- indexPath\(indexPath.item)")
         delegate?.collectionView(self, didSelectItemAt: indexPath.item)
     }
     
