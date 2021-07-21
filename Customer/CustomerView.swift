@@ -7,19 +7,7 @@
 
 import UIKit
 
-class CustomerView: UIView, MMAdvertScrollCustomerViewDelegate {
-    func customViewConfigure(numberOfItems item: Int, cycleView view: MMAdvertScrollView) -> UIView {
-
-        let view = VipView()
-         view.title = dataArray[item]
-        return view
-    }
-
-    func customerViewDataArrayCount() -> Int {
-        return dataArray.count
-    }
-
-
+class CustomerView: UIView {
     let dataArray = [ "学员155****1907购买了VIP月卡", "学员189****2290购买了VIP季卡" , "学员155****1907购买了VIP月卡" ]
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -71,16 +59,16 @@ class CustomerView: UIView, MMAdvertScrollCustomerViewDelegate {
         }()
     }
 }
-//
-//extension CustomerView2: MMAdvertScrollViewDelegate {
-//    
-//    func customCycleScrollViewCellClass(_ cycleView: MMAdvertScrollView) -> AnyClass {
-//        return CustomerCollectionViewCell.self
-//    }
-//    
-//    func customCycleScrollViewSet(_ collectionViewCell: UICollectionViewCell, numberOfItems item: Int, cycleView view: MMAdvertScrollView) {
-//        let customeCell = collectionViewCell as! CustomerCollectionViewCell
-//        customeCell.titles = ["恭喜xx，完成了数据管理能力测评。", "我是自定义view，而且cell是用纯代码实现的" ,"恭喜xxxxxxxxxxxxxx，完成实名认证。"]
-//        customeCell.backgroundColor = .red
-//    }
-//}
+
+extension CustomerView: MMAdvertScrollCustomerViewDelegate {
+    func customViewConfigure(numberOfItems item: Int, cycleView view: MMAdvertScrollView) -> UIView {
+        let view = VipView()
+        view.title = dataArray[item]
+        return view
+    }
+
+    func customerViewDataArrayCount() -> Int {
+        return dataArray.count
+    }
+
+}
