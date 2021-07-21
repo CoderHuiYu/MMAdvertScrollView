@@ -1,6 +1,6 @@
 # MMAdvertScrollView
 ##### 一个轻量级、简单易用的公告轮播组件【swift】
-## image：
+## image & gif：
 
 <p float="left">
 <img src="https://github.com/CoderHuiYu/MMAdvertScrollView/blob/main/example/example.jpeg" width = "300">
