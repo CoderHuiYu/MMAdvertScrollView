@@ -3,7 +3,7 @@
 ## image：
 
 <p float="left">
-<img src="https://github.com/CoderHuiYu/MMAdvertScrollView/blob/main/example/example.PNG" width = "300">
+<img src="https://github.com/CoderHuiYu/MMAdvertScrollView/blob/main/example/example.jpeg" width = "300">
 <img src="https://github.com/CoderHuiYu/MMAdvertScrollView/blob/main/example/example.gif" width = "300">
 <p />
 
