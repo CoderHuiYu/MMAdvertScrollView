@@ -11,8 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = . lightGray
-        
+
         view.addSubview(createLabel(title: "竖向滚动", frame: CGRect(x: 20, y: 100, width: UIScreen.main.bounds.width, height: 30)))
         let m1 = MMAdvertScrollView(frame: CGRect(x: 0, y: 135, width: UIScreen.main.bounds.width, height: 40))
         m1.timeInterval = 3
@@ -25,7 +24,7 @@ class ViewController: UIViewController {
         m3.scrollDirection = .horizontal
         m3.dataArray = ["恭喜xx，完成了数据管理能力测评。" ,"恭喜xxxxxxxxxxxxxx，完成实名认证。"]
         view.addSubview(m3)
-//
+
         view.addSubview(createLabel(title: "自定义View", frame: CGRect(x: 20, y: 300, width: UIScreen.main.bounds.width, height: 30)))
         let code_customerView = CustomerView(frame: CGRect(x: 0, y: 335, width: UIScreen.main.bounds.width, height: 60))
         view.addSubview(code_customerView)
