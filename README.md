@@ -10,10 +10,9 @@
 ## 1.How to use MMAdvertScrollView
 * Installation with CocoaPods：`pod 'MMAdvertScrollView', '~> 1.1.1'`
 
-```
+```swift
  var timeInterval: TimeInterval = 3.0 // 滚动间隔默认为3秒
  var scrollDirection: UICollectionView.ScrollDirection = .vertical //默认滚动方向为竖向
- var isOnlyShowTitle: Bool = false
 ```
 #### You can use like this
 ``` swift
