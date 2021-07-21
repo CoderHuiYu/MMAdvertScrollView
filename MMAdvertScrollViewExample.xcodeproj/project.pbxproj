@@ -16,11 +16,7 @@
 		E0C7AAA325BFC12700156BDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C7AAA125BFC12700156BDE /* LaunchScreen.storyboard */; };
 		E0C7AAAE25BFC12800156BDE /* MMAdvertScrollViewExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAAD25BFC12800156BDE /* MMAdvertScrollViewExampleTests.swift */; };
 		E0C7AAB925BFC12800156BDE /* MMAdvertScrollViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAB825BFC12800156BDE /* MMAdvertScrollViewExampleUITests.swift */; };
-		E0C7AAD725BFC1D300156BDE /* CustomerView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAD225BFC1D300156BDE /* CustomerView2.swift */; };
-		E0C7AAD825BFC1D300156BDE /* CustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAD325BFC1D300156BDE /* CustomerCollectionViewCell.swift */; };
-		E0C7AAD925BFC1D300156BDE /* CustomerXIBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C7AAD425BFC1D300156BDE /* CustomerXIBCell.xib */; };
-		E0C7AADA25BFC1D300156BDE /* CustomerXIBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAD525BFC1D300156BDE /* CustomerXIBCell.swift */; };
-		E0C7AADB25BFC1D300156BDE /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAD625BFC1D300156BDE /* CustomerView.swift */; };
+		E0C7AAD725BFC1D300156BDE /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AAD225BFC1D300156BDE /* CustomerView.swift */; };
 		E0EA180725C0106700395275 /* MMAdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA180525C0106700395275 /* MMAdvertCell.swift */; };
 		E0EA180825C0106700395275 /* MMAdvertScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA180625C0106700395275 /* MMAdvertScrollView.swift */; };
 /* End PBXBuildFile section */
@@ -58,11 +54,7 @@
 		E0C7AAB425BFC12800156BDE /* MMAdvertScrollViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMAdvertScrollViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C7AAB825BFC12800156BDE /* MMAdvertScrollViewExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMAdvertScrollViewExampleUITests.swift; sourceTree = "<group>"; };
 		E0C7AABA25BFC12800156BDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0C7AAD225BFC1D300156BDE /* CustomerView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerView2.swift; sourceTree = "<group>"; };
-		E0C7AAD325BFC1D300156BDE /* CustomerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerCollectionViewCell.swift; sourceTree = "<group>"; };
-		E0C7AAD425BFC1D300156BDE /* CustomerXIBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerXIBCell.xib; sourceTree = "<group>"; };
-		E0C7AAD525BFC1D300156BDE /* CustomerXIBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerXIBCell.swift; sourceTree = "<group>"; };
-		E0C7AAD625BFC1D300156BDE /* CustomerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerView.swift; sourceTree = "<group>"; };
+		E0C7AAD225BFC1D300156BDE /* CustomerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerView.swift; sourceTree = "<group>"; };
 		E0EA180525C0106700395275 /* MMAdvertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAdvertCell.swift; sourceTree = "<group>"; };
 		E0EA180625C0106700395275 /* MMAdvertScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAdvertScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,11 +140,7 @@
 		E0C7AAD125BFC1D300156BDE /* Customer */ = {
 			isa = PBXGroup;
 			children = (
-				E0C7AAD225BFC1D300156BDE /* CustomerView2.swift */,
-				E0C7AAD425BFC1D300156BDE /* CustomerXIBCell.xib */,
-				E0C7AAD325BFC1D300156BDE /* CustomerCollectionViewCell.swift */,
-				E0C7AAD525BFC1D300156BDE /* CustomerXIBCell.swift */,
-				E0C7AAD625BFC1D300156BDE /* CustomerView.swift */,
+				E0C7AAD225BFC1D300156BDE /* CustomerView.swift */,
 			);
 			path = Customer;
 			sourceTree = SOURCE_ROOT;
@@ -272,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0C7AAA325BFC12700156BDE /* LaunchScreen.storyboard in Resources */,
-				E0C7AAD925BFC1D300156BDE /* CustomerXIBCell.xib in Resources */,
 				E0C7AAA025BFC12700156BDE /* Assets.xcassets in Resources */,
 				E0C7AA9E25BFC12600156BDE /* Main.storyboard in Resources */,
 			);
@@ -300,13 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA27C73269B1ADD008C08E7 /* MMAdvertView.swift in Sources */,
-				E0C7AAD825BFC1D300156BDE /* CustomerCollectionViewCell.swift in Sources */,
 				E0C7AA9B25BFC12600156BDE /* ViewController.swift in Sources */,
 				0C34EADE269ADE9800B91D30 /* UIView+Utilities.swift in Sources */,
 				E0C7AA9725BFC12600156BDE /* AppDelegate.swift in Sources */,
-				E0C7AADB25BFC1D300156BDE /* CustomerView.swift in Sources */,
-				E0C7AADA25BFC1D300156BDE /* CustomerXIBCell.swift in Sources */,
-				E0C7AAD725BFC1D300156BDE /* CustomerView2.swift in Sources */,
+				E0C7AAD725BFC1D300156BDE /* CustomerView.swift in Sources */,
 				E0EA180725C0106700395275 /* MMAdvertCell.swift in Sources */,
 				E0EA180825C0106700395275 /* MMAdvertScrollView.swift in Sources */,
 			);
@@ -493,7 +477,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yuhui.MMAdvertScrollViewExample;
+				PRODUCT_BUNDLE_IDENTIFIER = yuhui.LinkedList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,7 +498,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yuhui.MMAdvertScrollViewExample;
+				PRODUCT_BUNDLE_IDENTIFIER = yuhui.LinkedList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

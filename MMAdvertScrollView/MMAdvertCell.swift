@@ -8,14 +8,14 @@
 import UIKit
 
 class MMAdvertCell: UICollectionViewCell {
-    public var customerView: UIView? { didSet { if customerView != oldValue { handleRowChanged(oldValue: oldValue) } } }
+    public var customerView: UIView? { didSet { if customerView != oldValue { handleCustomerViewChanged(oldValue: oldValue) } } }
 
     // MARK: Initialization
     public override init(frame: CGRect) { super.init(frame: frame); initialize() }
     public required init?(coder: NSCoder) { super.init(coder: coder); initialize() }
 
     private func initialize() {
-        backgroundColor = .purple
+        backgroundColor = .white
         translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -28,7 +28,7 @@ class MMAdvertCell: UICollectionViewCell {
     }
 
     // MARK: Updating
-    private func handleRowChanged(oldValue: UIView?) {
+    private func handleCustomerViewChanged(oldValue: UIView?) {
         // Remove old
         oldValue?.removeFromSuperview()
         // Add new 

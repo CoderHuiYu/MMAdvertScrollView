@@ -2,7 +2,7 @@
 //  MMAdvertScrollViewExampleTests.swift
 //  MMAdvertScrollViewExampleTests
 //
-//  Created by yuhui on 2021/1/26.
+//  Created by JefferyYu on 2021/1/26.
 //
 
 import XCTest

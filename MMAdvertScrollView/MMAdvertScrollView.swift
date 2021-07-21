@@ -19,16 +19,11 @@ extension MMAdvertScrollCustomerViewDelegate {
     func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int) {}
 }
 
-protocol MMAdvertScrollViewValueAble {
-    var title: String { get }
-}
-
 public class MMAdvertScrollView: UIView {
 
     var timeInterval: TimeInterval = 3.0
     var scrollDirection: UICollectionView.ScrollDirection = .vertical { didSet { layout.scrollDirection = scrollDirection } }
     var dataArray: [String]? { didSet { collectionView?.reloadData(); reload = true } }
-    var isOnlyShowTitle: Bool = false
     weak open var delegate: MMAdvertScrollCustomerViewDelegate?
     private var reload = false
     private var collectionView: UICollectionView?
@@ -57,7 +52,7 @@ public class MMAdvertScrollView: UIView {
     }
     
     private func setupTimer() {
-        // before create ,invalidate it fisrt //创建定时器前先停止定时器，不然会出现僵尸定时器，导致轮播频率错误
+        // before create ,invalidate it fisrt
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { [weak self] _ in self?.updateUI() }
         RunLoop.current.add(timer!, forMode: .common)
