@@ -27,7 +27,8 @@ public protocol MMAdvertScrollCustomerViewDelegate: AnyObject{
 
     func customerViewDataArrayCount() -> Int
     func customViewConfigure(numberOfItems item: Int, cycleView view: MMAdvertScrollView) -> UIView
-    func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int)
+    func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int) 
+    
 }
 ```
 ### you can refer to CustomerView 
