@@ -8,7 +8,7 @@
 import UIKit
 
 class MMAdvertCell: UICollectionViewCell {
-    public var customerView: UIView? { didSet { if customerView != oldValue { handleCustomerViewChanged(oldValue: oldValue) } } }
+    public var customerView: UIView? { didSet { if customerView != oldValue { handleRowChanged(oldValue: oldValue) } } }
 
     // MARK: Initialization
     public override init(frame: CGRect) { super.init(frame: frame); initialize() }
@@ -28,10 +28,10 @@ class MMAdvertCell: UICollectionViewCell {
     }
 
     // MARK: Updating
-    private func handleCustomerViewChanged(oldValue: UIView?) {
+    private func handleRowChanged(oldValue: UIView?) {
         // Remove old
         oldValue?.removeFromSuperview()
-        // Add new 
+        // Add new
         if let view = customerView {
             view.removeFromSuperview()
             contentView.addSubview(view, pinningEdges: .all, withInsets: .zero)
@@ -39,3 +39,4 @@ class MMAdvertCell: UICollectionViewCell {
     }
 
 }
+

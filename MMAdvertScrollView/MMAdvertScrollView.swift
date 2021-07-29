@@ -16,34 +16,38 @@ public protocol MMAdvertScrollCustomerViewDelegate: AnyObject{
 }
 
 extension MMAdvertScrollCustomerViewDelegate {
-    func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int) {}
+    func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int) { }
 }
 
 public class MMAdvertScrollView: UIView {
 
-    var timeInterval: TimeInterval = 3.0
-    var scrollDirection: UICollectionView.ScrollDirection = .vertical { didSet { layout.scrollDirection = scrollDirection } }
-    var dataArray: [String]? { didSet { collectionView?.reloadData(); reload = true } }
     weak open var delegate: MMAdvertScrollCustomerViewDelegate?
-    private var reload = false
+    open var timeInterval: TimeInterval = 3.0
+    open var scrollDirection: UICollectionView.ScrollDirection = .vertical { didSet { layout.scrollDirection = scrollDirection } }
+    open func reloadData() { collectionView?.reloadData(); reloadStart = true; canScroll = true }
+    // If you're a custom view, you don't have to assign a value to dataArray
+    open var dataArray: [String]? { didSet { collectionView?.reloadData(); reloadStart = true } }
+    private var canScroll = false
+    private var reloadStart = false
     private var collectionView: UICollectionView?
     private var timer: Timer?
     private var layout = UICollectionViewFlowLayout()
     private let ID = "MMAdvertCollectionViewCellidentifier"
     private let maxSectionCount = 10
 
-    convenience init() { self.init(frame: CGRect()) }
-    
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         initialization()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            self.collectionView?.reloadData()
+        }
     }
     
     public override func layoutSubviews() {
         layout.itemSize = CGSize(width: frame.size.width, height: frame.size.height)
         if itemsCount() > 1 { collectionView?.scrollToItem(at: IndexPath(item: 0, section: maxSectionCount >> 2), at: (scrollDirection == .vertical ? .bottom : .right), animated: false) }
     }
-    required init?(coder: NSCoder) { super.init(coder: coder); initialization() }
+    required public init?(coder: NSCoder) { super.init(coder: coder); initialization() }
     
     /// Componets
     private func initialization() {
@@ -80,11 +84,11 @@ public class MMAdvertScrollView: UIView {
         let count = itemsCount()
         if count <= 1 { return }
         var currentIndexPath = collectionView?.indexPathsForVisibleItems.last
-        if reload {
+        if reloadStart {
             if currentIndexPath?.item != 0 {
                 currentIndexPath = IndexPath(row: count - 1, section: 0);
             }
-            reload = false
+            reloadStart = false
         }
         let resetCurrentIndexPath = IndexPath(row: currentIndexPath?.item ?? 0, section: maxSectionCount >> 2)
         collectionView!.scrollToItem(at: resetCurrentIndexPath, at: (scrollDirection == .vertical ? .bottom : .right), animated: false)
@@ -99,12 +103,16 @@ public class MMAdvertScrollView: UIView {
     }
 
     private func itemsCount() -> Int {
+        if !checkIsCanStart() { return 0 }
         var count: NSInteger = dataArray?.count ?? 0
         if delegate?.customerViewDataArrayCount() != nil && delegate?.customViewConfigure(numberOfItems: 0, cycleView: self) != nil {
             count = delegate?.customerViewDataArrayCount() ?? 0
         }
         return count
     }
+    
+    // check whether is can start
+    private func checkIsCanStart() -> Bool { return dataArray != nil || canScroll }
 }
 
 extension MMAdvertScrollView : UICollectionViewDelegate, UICollectionViewDataSource {
@@ -114,6 +122,7 @@ extension MMAdvertScrollView : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if !checkIsCanStart() { return 0 }
         if delegate?.customViewConfigure(numberOfItems: 0, cycleView: self) != nil && delegate?.customerViewDataArrayCount() != nil {
             return delegate?.customerViewDataArrayCount() ?? 0
         }

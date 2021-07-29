@@ -35,8 +35,8 @@ class MMAdvertView: UIView {
     private lazy var titleLabel: UILabel = {
         let result = UILabel()
         result.setContentHuggingPriority(UILayoutPriority(100), for: .horizontal)
-        result.textColor = .black
         result.font = UIFont.systemFont(ofSize: 13)
+        result.textColor = .black
         result.text = " hello for test"
         return result
     }()
@@ -61,3 +61,4 @@ class MMAdvertView: UIView {
         }
     }
 }
+
