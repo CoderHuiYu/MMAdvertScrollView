@@ -12,6 +12,7 @@ class CustomerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(advertScrollView)
+        advertScrollView.reloadData()
     }
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
