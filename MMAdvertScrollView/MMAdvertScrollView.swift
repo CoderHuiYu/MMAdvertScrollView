@@ -82,7 +82,7 @@ public class MMAdvertScrollView: UIView {
         if count <= 1 { return }
         
         let currentIndexPath = collectionView?.indexPathsForVisibleItems.last
-        let resetCurrentIndexPath = IndexPath(row: currentIndexPath?.item ?? 0, section: maxSectionCount >> 2)
+        let resetCurrentIndexPath = IndexPath(row: currentIndexPath?.item ?? 0, section: maxSectionCount >> 1)
         collectionView!.scrollToItem(at: resetCurrentIndexPath, at: (scrollDirection == .vertical ? .bottom : .right), animated: false)
         var nextItem = resetCurrentIndexPath.item + 1
         var nextSection = resetCurrentIndexPath.section
