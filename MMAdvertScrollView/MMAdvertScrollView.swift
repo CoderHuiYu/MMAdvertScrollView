@@ -38,9 +38,6 @@ public class MMAdvertScrollView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         initialization()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            self.collectionView?.reloadData()
-        }
     }
     
     public override func layoutSubviews() {
@@ -83,13 +80,8 @@ public class MMAdvertScrollView: UIView {
     private func updateUI() {
         let count = itemsCount()
         if count <= 1 { return }
-        var currentIndexPath = collectionView?.indexPathsForVisibleItems.last
-        if reloadStart {
-            if currentIndexPath?.item != 0 {
-                currentIndexPath = IndexPath(row: count - 1, section: 0);
-            }
-            reloadStart = false
-        }
+        
+        let currentIndexPath = collectionView?.indexPathsForVisibleItems.last
         let resetCurrentIndexPath = IndexPath(row: currentIndexPath?.item ?? 0, section: maxSectionCount >> 2)
         collectionView!.scrollToItem(at: resetCurrentIndexPath, at: (scrollDirection == .vertical ? .bottom : .right), animated: false)
         var nextItem = resetCurrentIndexPath.item + 1
