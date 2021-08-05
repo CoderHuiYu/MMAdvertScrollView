@@ -5,7 +5,6 @@
 //  Created by JefferyYu on 2021/4/26.
 //
 
-
 import UIKit
 
 public protocol MMAdvertScrollCustomerViewDelegate: AnyObject{
@@ -33,7 +32,7 @@ public class MMAdvertScrollView: UIView {
     private var timer: Timer?
     private var layout = UICollectionViewFlowLayout()
     private let ID = "MMAdvertCollectionViewCellidentifier"
-    private let maxSectionCount = 10
+    private let maxSectionCount = 2
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -82,7 +81,7 @@ public class MMAdvertScrollView: UIView {
         if count <= 1 { return }
         
         let currentIndexPath = collectionView?.indexPathsForVisibleItems.last
-        let resetCurrentIndexPath = IndexPath(row: currentIndexPath?.item ?? 0, section: maxSectionCount >> 1)
+        let resetCurrentIndexPath = IndexPath(row: currentIndexPath?.item ?? 0, section: maxSectionCount >> 2)
         collectionView!.scrollToItem(at: resetCurrentIndexPath, at: (scrollDirection == .vertical ? .bottom : .right), animated: false)
         var nextItem = resetCurrentIndexPath.item + 1
         var nextSection = resetCurrentIndexPath.section
