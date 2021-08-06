@@ -5,7 +5,7 @@
 ### The realization principle of cyclic rolling
 > collectionView has 2 sections
 
-> start --> indexPath(0, 0) --> indexPath(0, 1) --> indexPath(0, 2) --> ... --> indexPath(0, n) --> indexPath(1, 0) --> indexPath(0, 1)
+> start --> `indexPath(0, 0)` --> `indexPath(0, 1`) --> `indexPath(0, 2)` --> `...` --> `indexPath(0, n)` --> `indexPath(1, 0)` --> `indexPath(0, 1)`
 
 ![origion1](https://user-images.githubusercontent.com/18704047/128453181-0ffa1557-9a09-4e46-8c30-710824920c54.png)
 
