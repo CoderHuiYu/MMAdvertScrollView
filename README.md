@@ -3,7 +3,7 @@
 ![2981628157219_](https://user-images.githubusercontent.com/18704047/128330982-14756df4-c47d-4d43-b60c-be714db8aa28.jpg)
 
 ### The realization principle of cyclic rolling
-> Collection has 2 sections
+> collectionView has 2 sections
 
 > start --> indexPath(0, 0) --> indexPath(0, 1) --> indexPath(0, 2) --> ... --> indexPath(0, n) --> indexPath(1, 0) --> indexPath(0, 1)
 
