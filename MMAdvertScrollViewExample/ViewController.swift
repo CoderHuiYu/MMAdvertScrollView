@@ -16,13 +16,13 @@ class ViewController: UIViewController {
         let m1 = MMAdvertScrollView(frame: CGRect(x: 0, y: 135, width: UIScreen.main.bounds.width, height: 40))
         m1.timeInterval = 3
         m1.scrollDirection = .vertical
-        m1.dataArray = ["恭喜xx，完成了数据管理能力测评。" ,"恭喜xxxxxxxxxxxxxx，完成实名认证。"]
+        m1.dataArray = ["恭喜xx11，完成了数据管理能力测评。" ,"恭喜xx22，完成实名认证。", "恭喜xx33，完成实名认证。", "恭喜xxx44，完成实名认证。"]
         view.addSubview(m1)
 
         view.addSubview(createLabel(title: "横向滚动", frame: CGRect(x: 20, y: 200, width: UIScreen.main.bounds.width, height: 30)))
         let m3 = MMAdvertScrollView(frame: CGRect(x: 0, y: 235, width: UIScreen.main.bounds.width, height: 40))
         m3.scrollDirection = .horizontal
-        m3.dataArray = ["恭喜xx，完成了数据管理能力测评。" ,"恭喜xxxxxxxxxxxxxx，完成实名认证。"]
+        m3.dataArray = ["恭喜xx11，完成了数据管理能力测评。" ,"恭喜xx22，完成实名认证。", "恭喜xx33，完成实名认证。", "恭喜xxx44，完成实名认证。"]
         view.addSubview(m3)
 
         view.addSubview(createLabel(title: "自定义View", frame: CGRect(x: 20, y: 300, width: UIScreen.main.bounds.width, height: 30)))
