@@ -1,5 +1,5 @@
 # MMAdvertScrollView
-## 一个轻量级、简单易用的公告轮播组件【swift】
+## 一个轻量级、简单易用的公告轮播组件
 ![2981628157219_](https://user-images.githubusercontent.com/18704047/128330982-14756df4-c47d-4d43-b60c-be714db8aa28.jpg)
 
 ### The realization principle of cyclic rolling
