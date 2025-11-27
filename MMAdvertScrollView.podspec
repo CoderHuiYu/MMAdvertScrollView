@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'MMAdvertScrollView'
-  s.version      = '1.2.2'
+  s.version      = '1.2.3'
   s.summary      = 'The fastest and most convenient conversion between JSON and model'
   s.homepage     = 'https://github.com/CoderHuiYu/MMAdvertScrollView'
   s.license      = 'MIT'

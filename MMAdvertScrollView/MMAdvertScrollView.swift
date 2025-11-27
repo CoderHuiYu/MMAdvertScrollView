@@ -15,7 +15,7 @@ public protocol MMAdvertScrollCustomerViewDelegate: AnyObject{
 }
 
 public extension MMAdvertScrollCustomerViewDelegate {
-    func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int) { }
+    func collectionView(cycleView view: MMAdvertScrollView, didSelectItemAt indexItem: Int) { }
 }
 
 public class MMAdvertScrollView: UIView {
@@ -138,7 +138,7 @@ extension MMAdvertScrollView : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.collectionView(self, didSelectItemAt: indexPath.item)
+        delegate?.collectionView(cycleView: self, didSelectItemAt: indexPath.item)
     }
     
 }
