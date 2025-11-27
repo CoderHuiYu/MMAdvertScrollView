@@ -17,7 +17,10 @@
 <p />
 
 ## 1.How to use MMAdvertScrollView
-* Installation with CocoaPods：`pod 'MMAdvertScrollView', '~> 1.2.1'`
+* Installation with CocoaPods：
+  ```swift
+  pod 'MMAdvertScrollView', '~> 1.2.1'
+  ```
 
 ```swift
  var timeInterval: TimeInterval = 3.0 // 滚动间隔默认为3秒
