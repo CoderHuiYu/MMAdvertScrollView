@@ -30,17 +30,18 @@ class CustomerView: UIView {
 }
 
 extension CustomerView: MMAdvertScrollCustomerViewDelegate {
+    func customerViewDataArrayCount(cycleView view: MMAdvertScrollView) -> Int {
+        return dataArray.count
+    }
+    
     func customViewConfigure(numberOfItems item: Int, cycleView view: MMAdvertScrollView) -> UIView {
         let view = VipView()
         view.title = dataArray[item]
         return view
     }
 
-    func customerViewDataArrayCount() -> Int {
-        return dataArray.count
-    }
     
-    func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int) {
+    func collectionView(cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int) {
         print("----\(indexItem)")
     }
 }

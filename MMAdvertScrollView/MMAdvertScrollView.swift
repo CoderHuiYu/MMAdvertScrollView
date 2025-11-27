@@ -9,12 +9,12 @@ import UIKit
 
 public protocol MMAdvertScrollCustomerViewDelegate: AnyObject{
 
-    func customerViewDataArrayCount() -> Int
+    func customerViewDataArrayCount(cycleView view: MMAdvertScrollView) -> Int
     func customViewConfigure(numberOfItems item: Int, cycleView view: MMAdvertScrollView) -> UIView
-    func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int)
+    func collectionView(cycleView view: MMAdvertScrollView, didSelectItemAt indexItem: Int)
 }
 
-extension MMAdvertScrollCustomerViewDelegate {
+public extension MMAdvertScrollCustomerViewDelegate {
     func collectionView(_ cycleView: MMAdvertScrollView, didSelectItemAt indexItem: Int) { }
 }
 
@@ -23,6 +23,11 @@ public class MMAdvertScrollView: UIView {
     weak open var delegate: MMAdvertScrollCustomerViewDelegate?
     open var timeInterval: TimeInterval = 3.0
     open var scrollDirection: UICollectionView.ScrollDirection = .vertical { didSet { layout.scrollDirection = scrollDirection } }
+    open var isScrollEnabled: Bool = false {
+        didSet {
+            collectionView?.isScrollEnabled = true
+        }
+    }
     open func reloadData() { collectionView?.reloadData(); reloadStart = true; canScroll = true }
     // If you're a custom view, you don't have to assign a value to dataArray
     open var dataArray: [String]? { didSet { collectionView?.reloadData(); reloadStart = true } }
@@ -96,8 +101,8 @@ public class MMAdvertScrollView: UIView {
     private func itemsCount() -> Int {
         if !checkIsCanStart() { return 0 }
         var count: NSInteger = dataArray?.count ?? 0
-        if delegate?.customerViewDataArrayCount() != nil && delegate?.customViewConfigure(numberOfItems: 0, cycleView: self) != nil {
-            count = delegate?.customerViewDataArrayCount() ?? 0
+        if delegate?.customerViewDataArrayCount(cycleView: self) != nil && delegate?.customViewConfigure(numberOfItems: 0, cycleView: self) != nil {
+            count = delegate?.customerViewDataArrayCount(cycleView: self) ?? 0
         }
         return count
     }
@@ -114,8 +119,8 @@ extension MMAdvertScrollView : UICollectionViewDelegate, UICollectionViewDataSou
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if !checkIsCanStart() { return 0 }
-        if delegate?.customViewConfigure(numberOfItems: 0, cycleView: self) != nil && delegate?.customerViewDataArrayCount() != nil {
-            return delegate?.customerViewDataArrayCount() ?? 0
+        if delegate?.customViewConfigure(numberOfItems: 0, cycleView: self) != nil && delegate?.customerViewDataArrayCount(cycleView: self) != nil {
+            return delegate?.customerViewDataArrayCount(cycleView: self) ?? 0
         }
         return dataArray?.count ?? 0
     }
